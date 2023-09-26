@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "KumbhSans";
+  src: url("../fonts/KumbhSans.ttf");
+}
+
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.questionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+.question {
+  font-family: "KumbhSans";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.questionContainer button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.questionContainer:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.questionContainer img {
+ height: 10px;
+}
+
+.answer {
+  display: none;
+  font-family: "KumbhSans";
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.questionContainer:focus + .answer {
+  display: block;
+}
+
+.questionContainer:focus p {
+  font-weight: 700;
+}
+
+hr {
+  width: 100%;
+  border-top: 2px solid black;
+  opacity: 0.1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+}

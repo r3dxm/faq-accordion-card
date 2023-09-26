@@ -1,0 +1,122 @@
+:root {
+  --very-dark-saturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+@font-face {
+  font-family: "KumbhSans";
+  src: url("../fonts/KumbhSans.ttf");
+}
+
+.container {
+  width: 1000px;
+  height: 550px;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+
+.box {
+  z-index: 100;
+  position: absolute;
+  margin-left: -100px;
+  margin-top: 200px;
+}
+
+.illustrationContainer {
+  width: 500px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundPatternDesktop {
+  position: relative;
+  height: 1000px;
+  margin-left: -600px;
+  margin-top: -320px;
+}
+
+.illustrationWomanDesktop {
+  position: absolute;
+  margin-left: -475px;
+  margin-top: 75px;
+}
+
+.backgroundPatternMobile {
+  display: none;
+}
+
+.illustrationWomanMobile {
+  display: none;
+}
+
+.faqContainer {
+  padding: 20px;
+}
+
+.faqContainer h1 {
+  font-family: "KumbhSans";
+  font-weight: 700;
+  font-size: 28px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+  }
+  .box {
+    display: none;
+  }
+  .illustrationContainer {
+    width: auto;
+    overflow: visible;
+  }
+  .backgroundPatternDesktop {
+    display: none;
+  }
+  .backgroundPatternMobile {
+    display: block;
+    position: absolute;
+    width: 265px;
+    margin-top: 5px;
+    margin-left: 120px;
+  }
+  .illustrationWomanDesktop {
+    display: none;
+  }
+  .illustrationWomanMobile {
+    display: block;
+    position: absolute;
+    height: 200px;
+    margin-top: -120px;
+    margin-left: 120px;
+  }
+  .faqContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+  }
+  .faqContainer h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    width: 350px;
+  }
+  .backgroundPatternMobile, .illustrationWomanMobile {
+    margin-left: 45px;
+  }
+}
